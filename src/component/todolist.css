@@ -1,0 +1,141 @@
+:root {
+  --color-bg: #1e1e2f;
+  --color-card: #2b2b3c;
+  --color-white: #ffffff;
+  --color-light: #f0f0f5;
+  --color-text: #e0e0e0;
+  --color-muted: #a0a0a5;
+
+  --color-add: #4ade80; /* أخضر فاتح */
+  --color-add-hover: #22c55e;
+  --color-delete: #f87171; /* أحمر وردي */
+  --color-delete-hover: #ef4444;
+  --color-move: #60a5fa; /* أزرق سماوي */
+  --color-move-hover: #3b82f6;
+
+  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+body {
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+}
+
+.to-do-list {
+  text-align: center;
+  margin-top: 80px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--color-light);
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+  margin: 5px;
+}
+
+.add-button {
+  background-color: var(--color-add);
+}
+
+.add-button:hover {
+  background-color: var(--color-add-hover);
+}
+
+.delete-button {
+  background-color: var(--color-delete);
+}
+
+.delete-button:hover {
+  background-color: var(--color-delete-hover);
+}
+
+.move-button {
+  background-color: var(--color-move);
+}
+
+.move-button:hover {
+  background-color: var(--color-move-hover);
+}
+
+input[type="text"] {
+  font-size: 1.4rem;
+  padding: 10px;
+  border: 2px solid var(--color-muted);
+  border-radius: var(--border-radius);
+  color: var(--color-text);
+  background-color: var(--color-card);
+  width: 250px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: var(--color-muted);
+}
+
+/* Task list */
+ol {
+  padding: 0;
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+
+
+ 
+}
+
+li , .task-info {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 15px;
+  background-color: var(--color-card);
+  margin-bottom: 12px;
+  border: 2px solid var(--color-muted);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-text);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
+}
+.task-info{
+  max-width: 60% ;
+  margin: auto;
+  margin-top: 50px;
+}
+.task-info span {
+  color: var(--color-add-hover);
+  font-size: 40px;
+}
+.text {
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
+}
+
+li button {
+  padding: 8px 12px;
+  font-size: 1.2rem;
+}
+
